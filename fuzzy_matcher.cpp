@@ -198,20 +198,8 @@ int main()
 
 		int max_distance = 4;
 
-		char save = in_word[0];
-
-		if (in_word.size() < 5 &&
-			in_word.size() > 1 &&
-			isdigit(in_word[1]))
-		{
-			in_word[0] = 'E';
-			max_distance = 0;
-		}
-
 		// Query tree for input word
 		bk_tree->query(in_word, max_distance, result);
-
-		in_word[0] = save;
 
 		if (!result.empty())
 		{
